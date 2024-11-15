@@ -12,7 +12,16 @@ Se ha creado el Sistema de transporte público de una ciudad
 
 ### V0
 
-|                                                                                                                                                                |                                                                                          Código                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                          |                                                                                          Código                                                                                           |
+| -------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | ![](/images/V0/TransportePublico-DiagramaClases-V0.svg)  |  [Diagrama de Clases V0](https://github.com/Ingenieria-Informatica-UNEATLANTICO/app-actividad-post-parcial-SantiGT1503/blob/main/modelosUML/V0/TransportePublico-DiagramaClases-V0.puml)  |
 | ![](/images/V0/TransportePúblico-DiagramaObjetos-V0.svg) | [Diagrama de Objetos V0](https://github.com/Ingenieria-Informatica-UNEATLANTICO/app-actividad-post-parcial-SantiGT1503/blob/main/modelosUML/V0/TransportePúblico-DiagramaObjetos-V0.puml) |
+
+## Iteración de mejora - ChatGPT
+
+### V1
+
+|                                                          |                                                                                          Código                                                                                           |
+| -------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| ![](/images/V1/TransportePublico-DiagramaClases-V1.svg)  |  [Diagrama de Clases V1](https://github.com/Ingenieria-Informatica-UNEATLANTICO/app-actividad-post-parcial-SantiGT1503/blob/main/modelosUML/V1/TransportePublico-DiagramaClases-V1.puml)  |
+| ![](/images/V1/TransportePúblico-DiagramaObjetos-V1.svg) | [Diagrama de Objetos V1](https://github.com/Ingenieria-Informatica-UNEATLANTICO/app-actividad-post-parcial-SantiGT1503/blob/main/modelosUML/V1/TransportePúblico-DiagramaObjetos-V1.puml) |
