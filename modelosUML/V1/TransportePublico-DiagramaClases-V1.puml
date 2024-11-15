@@ -1,0 +1,64 @@
+@startuml
+hide empty members
+hide circle
+
+class Ayuntamiento {
+}
+
+class Incidencias {
+}
+
+class Abono {
+}
+
+class Horario {
+}
+
+class Ruta {
+}
+
+class Vehículo {
+}
+
+class Tarifa {
+}
+
+class Parada {
+}
+
+class Persona {
+}
+
+class Conductor {
+}
+
+class Pasajero {
+}
+
+Ayuntamiento --> Incidencias : Administra
+Ayuntamiento --> Tarifa : Define
+Ayuntamiento --> Ruta : Administra
+Ayuntamiento --> Abono : Dispone
+Ayuntamiento --> Horario : Define
+
+Incidencias --> Vehículo : Afecta
+Abono ..> Tarifa : Liquida
+Parada --> Horario : Tiene
+Ruta --> Vehículo : Ocupa
+Ruta --> Parada : Incluye
+Vehículo --> Conductor : Lleva
+Vehículo --> Pasajero : Lleva
+Vehículo --> Tarifa : Tiene
+
+Persona --> Tarifa : Paga
+Persona --> Vehículo : Conduce
+Persona --> Abono : Adquiere
+Persona ..> Parada : Llega
+
+Conductor <|-- Persona : Hereda
+Pasajero <|-- Persona : Hereda
+
+Pasajeros *-- Persona
+Conductores *-- Persona
+
+@enduml
