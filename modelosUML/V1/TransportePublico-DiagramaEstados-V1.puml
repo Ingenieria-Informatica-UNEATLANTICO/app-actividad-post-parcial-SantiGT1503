@@ -1,0 +1,40 @@
+@startuml
+
+[*] --> RutaInactiva
+
+state RutaInactiva {
+    [*] --> RutaNoDisponible
+    RutaNoDisponible --> RutaActiva : Activar
+}
+
+state RutaActiva {
+    [*] --> RutaEnCurso
+    RutaEnCurso --> RutaCompletada : Finalizar
+    RutaEnCurso --> RutaSuspendida : Suspender
+}
+
+state VehículoDisponible {
+    [*] --> VehículoInactivo
+    VehículoInactivo --> VehículoEnRuta : Iniciar viaje
+    VehículoEnRuta --> VehículoEnMantenimiento : Necesita mantenimiento
+    VehículoEnRuta --> VehículoDisponible : Llegar al destino
+}
+
+state Persona {
+    [*] --> EsperandoEnLaParada
+    EsperandoEnLaParada --> Viajando : Subir al vehículo
+    Viajando --> Descansando : Salir del vehículo
+    Descansando --> EsperandoEnLaParada : Volver a la parada
+}
+
+state Tarifa {
+    [*] --> Vigente
+    Vigente --> Expirada : Vencimiento
+    Expirada --> Vigente : Renovar
+}
+
+RutaActiva --> VehículoEnRuta : Asignar Vehículo
+VehículoEnRuta --> Persona : Transportar
+Persona --> Tarifa : Pagar
+
+@enduml

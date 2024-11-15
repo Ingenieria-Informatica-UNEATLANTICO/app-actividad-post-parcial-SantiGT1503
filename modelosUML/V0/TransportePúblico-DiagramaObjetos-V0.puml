@@ -1,0 +1,52 @@
+@startuml
+hide empty members
+hide circle
+
+class "Ruta13: Ruta" {
+    Estado: activa
+    Puntualidad: Atrasada
+    Destino: Lluja
+}
+
+class "Vehículo1: Vehículo" {
+    Capacidad: 100
+    Modelo: XM100
+    Asientos: 50
+    Tipo: Bus
+}
+
+class "Tarifa1: Tarifa" {
+    Costo: 1.30
+    TipoTarifa: Bus
+}
+
+class "Parada1: Parada" {
+    Nombre: Manuel Llano
+    Número: 13
+    Corresponencia: Ruta1
+}
+
+class "Persona1: Persona" {
+    Nombre: Santiago Gómez
+    Permiso: Pasajero
+    Abono: Tarjeta Trimestral
+}
+
+class "Persona2: Persona" {
+    Nombre: Juan Toca
+    Permiso: Conductor
+    Abono: Especial Conductor
+}
+
+"Ruta13: Ruta" --> "Vehículo1: Vehículo" : Ocupa
+"Ruta13: Ruta" --> "Parada1: Parada" : Se compone
+"Vehículo1: Vehículo" ..> "Parada1: Parada" : Llega
+"Persona1: Persona" ..> "Parada1: Parada" : Llega
+"Persona1: Persona" --> "Tarifa1: Tarifa" : Paga
+"Persona2: Persona" --> "Tarifa1: Tarifa" : Paga
+"Vehículo1: Vehículo" --> "Persona1: Persona" : Lleva
+"Vehículo1: Vehículo" --> "Persona2: Persona" : Lleva
+"Vehículo1: Vehículo" --> "Tarifa1: Tarifa" : Tiene
+"Persona2: Persona" --> "Vehículo1: Vehículo" : Conduce
+
+@enduml
